@@ -394,6 +394,116 @@ h2 {
   text-decoration: underline;
 }
 
+.article-page {
+  max-width: 980px;
+}
+
+.article-image {
+  display: block;
+  width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 36px;
+}
+
+.article-image:not(.chart-image) {
+  object-fit: cover;
+}
+
+.chart-image {
+  padding: 18px;
+}
+
+.article-copy {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 34px;
+  margin-bottom: 32px;
+}
+
+.article-copy h2 {
+  margin-bottom: 14px;
+}
+
+.article-copy p,
+.article-copy li,
+.info-card p,
+.layer-detail p {
+  color: var(--text-light);
+  line-height: 1.75;
+}
+
+.article-copy p + p {
+  margin-top: 14px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.info-card,
+.layer-detail {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.info-card {
+  padding: 26px;
+  border-top: 5px solid var(--teal);
+}
+
+.info-card h3,
+.layer-detail h3 {
+  font-family: 'Fredoka One', cursive;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.layer-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.layer-detail {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  padding: 28px;
+}
+
+.article-callout {
+  background: linear-gradient(135deg, var(--teal-dark) 0%, var(--blue) 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  text-align: center;
+  padding: 34px;
+  margin-bottom: 32px;
+}
+
+.article-steps,
+.article-list {
+  padding-left: 1.3rem;
+  margin-top: 18px;
+}
+
+.article-steps li + li,
+.article-list li + li {
+  margin-top: 12px;
+}
+
 .card-accent {
   position: absolute;
   top: -20px;
@@ -628,6 +738,16 @@ footer a {
 
   .did-you-know {
     padding: 36px 24px;
+  }
+
+  .article-copy,
+  .layer-detail {
+    padding: 24px;
+  }
+
+  .layer-detail {
+    flex-direction: column;
+    gap: 10px;
   }
 
   section {
