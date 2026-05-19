@@ -1,14 +1,20 @@
 <header>
   <div class="header-inner">
     <a class="logo" href="{{ '/' | relative_url }}">
-      <img src="{{ '/logo.png' | relative_url }}" alt="TooTee Learning logo">
+      <img src="{{ '/logo.png' | relative_url }}" alt="Too-Tee Learning logo">
       <div class="logo-text">
         <span class="logo-name">Too-Tee<sup>&reg;</sup></span>
         <span class="logo-learning">TOOTEELEARNING.COM</span>
       </div>
     </a>
-    <nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
       <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
       <a href="{{ '/tooth-facts/' | relative_url }}">Tooth Facts</a>
       <a href="{{ '/for-kids/' | relative_url }}">For Kids</a>
       <a href="{{ '/for-adults/' | relative_url }}">For Adults</a>
