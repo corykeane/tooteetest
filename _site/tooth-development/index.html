@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooth Development - Too-Tee Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/tootee-favicon.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <img src="/logo.png" alt="Too-Tee Learning logo">
+      <div class="logo-text">
+        <span class="logo-name">Too-Tee<sup>&reg;</sup></span>
+        <span class="logo-learning">TOOTEELEARNING.COM</span>
+      </div>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/tooth-facts/">Tooth Facts</a>
+      <a href="/for-kids/">For Kids</a>
+      <a href="/for-adults/">For Adults</a>
+      <a href="/start-learning/" class="nav-cta">Start Learning</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    
+    <section class="page-hero">
+      <span class="tag">Tooth Development</span>
+      <h1>From Baby Teeth to Adult Teeth</h1>
+      <p>Tooth development happens over many years as primary teeth arrive, loosen, and guide permanent teeth into place.</p>
+    </section>
+    
+    <section>
+  <div class="section-inner article-page">
+    <img class="article-image chart-image" src="/assets/images/tooth-eruption-chart.gif" alt="Tooth development and eruption chart">
+
+    <div class="article-copy">
+      <h2>Tooth Development Chart</h2>
+      <p>Baby teeth, also called primary teeth, are the first set of teeth that appear in a child's mouth. These teeth usually begin to emerge around the age of 6 months, and the full set of 20 primary teeth is usually in place by the age of 2 or 3 years.</p>
+      <p>Baby teeth are smaller and more delicate than adult teeth. They also have thinner enamel, the hard outer layer of the tooth, which makes them more prone to cavities.</p>
+      <p>As a child grows, the primary teeth are eventually replaced by adult teeth, also known as permanent teeth. The process of replacing primary teeth with adult teeth is called tooth exfoliation.</p>
+    </div>
+
+    <div class="info-grid">
+      <article class="info-card"><h3>First Teeth</h3><p>Primary teeth usually begin appearing around 6 months of age.</p></article>
+      <article class="info-card"><h3>Full Baby Set</h3><p>By age 2 or 3, most children have all 20 primary teeth in place.</p></article>
+      <article class="info-card"><h3>Adult Teeth Begin</h3><p>Tooth exfoliation usually begins around age 6, when the first adult molars appear in the back of the mouth.</p></article>
+      <article class="info-card"><h3>Permanent Set</h3><p>The process continues until around age 21, when the full set of 32 adult teeth is usually in place.</p></article>
+    </div>
+
+    <div class="article-copy">
+      <h2>Why Primary Teeth Matter</h2>
+      <p>Primary teeth play a vital role in the development of the mouth and jaw. They help children chew, speak, and smile, and they help guide adult teeth into the correct position.</p>
+      <p>Adult teeth are larger and stronger than primary teeth. They have thicker enamel and are spaced farther apart, which supports proper chewing and biting.</p>
+      <p>Children should take good care of their primary teeth by brushing twice a day with a pea-sized amount of toothpaste and visiting the dentist regularly to make sure their teeth are healthy and developing properly.</p>
+    </div>
+
+    <a class="btn" href="/#timeline">See Timeline</a>
+  </div>
+</section>
+
+  </main>
+  <footer>
+  <strong>Too-Tee<sup>&reg;</sup> Learning - tooteelearning.com</strong><br>
+  Educational dental content for kids and families.<br>
+  Too-Tee<sup>&reg;</sup> is a registered trademark. All rights reserved.<br>
+  <a href="/privacy-policy/">Privacy Policy</a> ·
+  <a href="/about/">About</a>
+</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var header = document.querySelector('header');
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!header || !toggle || !nav) return;
+
+      function setMenu(open) {
+        header.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      }
+
+      toggle.addEventListener('click', function () {
+        setMenu(!header.classList.contains('nav-open'));
+      });
+
+      nav.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') setMenu(false);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setMenu(false);
+      });
+    });
+  </script>
+</body>
+</html>

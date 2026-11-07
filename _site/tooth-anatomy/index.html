@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooth Anatomy - Too-Tee Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/tootee-favicon.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <img src="/logo.png" alt="Too-Tee Learning logo">
+      <div class="logo-text">
+        <span class="logo-name">Too-Tee<sup>&reg;</sup></span>
+        <span class="logo-learning">TOOTEELEARNING.COM</span>
+      </div>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/tooth-facts/">Tooth Facts</a>
+      <a href="/for-kids/">For Kids</a>
+      <a href="/for-adults/">For Adults</a>
+      <a href="/start-learning/" class="nav-cta">Start Learning</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    
+    <section class="page-hero">
+      <span class="tag">Tooth Anatomy</span>
+      <h1>Tooth and Support Tissues</h1>
+      <p>Teeth are supported by several layers of tissue, each with a specific job that protects, nourishes, and anchors the tooth.</p>
+    </section>
+    
+    <section>
+  <div class="section-inner article-page">
+    <img class="article-image" src="/assets/images/tooth-support-tissues.jpg" alt="Dentist examining a dental x-ray">
+
+    <div class="article-copy">
+      <h2>Tooth and Support Tissues</h2>
+      <p>Teeth are supported by several layers of tissue. Each layer has a specific function, from protecting the tooth's outside surface to anchoring the root in the jawbone.</p>
+    </div>
+
+    <div class="layer-detail-list">
+      <article class="layer-detail">
+        <span class="layer-num">1</span>
+        <div>
+          <h3>Enamel</h3>
+          <p>The outermost layer of the tooth is enamel. It is the hardest and most mineralized tissue in the body. Enamel is a transparent white substance that protects the tooth and helps maintain its shape. It is composed of tightly packed crystals of hydroxyapatite.</p>
+        </div>
+      </article>
+      <article class="layer-detail">
+        <span class="layer-num" style="color:var(--yellow-dark)">2</span>
+        <div>
+          <h3>Dentin</h3>
+          <p>Dentin lies underneath the enamel and makes up the majority of the tooth. It is a hard yellow substance that is less mineralized than enamel and more porous. Dentin is formed by cells called odontoblasts and is responsible for the yellow color of teeth.</p>
+        </div>
+      </article>
+      <article class="layer-detail">
+        <span class="layer-num" style="color:var(--coral)">3</span>
+        <div>
+          <h3>Pulp</h3>
+          <p>The pulp is the innermost layer of the tooth. It is made up of blood vessels, nerves, and connective tissue. It sits in the center of the tooth and extends from the crown, the visible part of the tooth, down to the root. The pulp nourishes and protects the tooth and is essential for its survival.</p>
+        </div>
+      </article>
+      <article class="layer-detail">
+        <span class="layer-num" style="color:var(--blue-light)">4</span>
+        <div>
+          <h3>Cementum</h3>
+          <p>Cementum is a thin layer of tissue that covers the root of the tooth. It is a hard, calcified substance that helps anchor the tooth in the jawbone. Cementum is formed by cells called cementoblasts and is essential for maintaining tooth stability.</p>
+        </div>
+      </article>
+      <article class="layer-detail">
+        <span class="layer-num" style="color:var(--pink)">5</span>
+        <div>
+          <h3>Periodontal Ligament</h3>
+          <p>The periodontal ligament is a thin layer of connective tissue that surrounds the tooth and helps support it in the jawbone. Its fibers attach the cementum of the tooth to the alveolar bone of the jaw. The ligament absorbs shock and allows slight tooth movement, which is needed for normal chewing and biting.</p>
+        </div>
+      </article>
+    </div>
+
+    <a class="btn" href="/#topics">Back to Topics</a>
+  </div>
+</section>
+
+  </main>
+  <footer>
+  <strong>Too-Tee<sup>&reg;</sup> Learning - tooteelearning.com</strong><br>
+  Educational dental content for kids and families.<br>
+  Too-Tee<sup>&reg;</sup> is a registered trademark. All rights reserved.<br>
+  <a href="/privacy-policy/">Privacy Policy</a> ·
+  <a href="/about/">About</a>
+</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var header = document.querySelector('header');
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!header || !toggle || !nav) return;
+
+      function setMenu(open) {
+        header.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      }
+
+      toggle.addEventListener('click', function () {
+        setMenu(!header.classList.contains('nav-open'));
+      });
+
+      nav.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') setMenu(false);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setMenu(false);
+      });
+    });
+  </script>
+</body>
+</html>

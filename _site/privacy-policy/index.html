@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Too-Tee Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/tootee-favicon.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <img src="/logo.png" alt="Too-Tee Learning logo">
+      <div class="logo-text">
+        <span class="logo-name">Too-Tee<sup>&reg;</sup></span>
+        <span class="logo-learning">TOOTEELEARNING.COM</span>
+      </div>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/tooth-facts/">Tooth Facts</a>
+      <a href="/for-kids/">For Kids</a>
+      <a href="/for-adults/">For Adults</a>
+      <a href="/start-learning/" class="nav-cta">Start Learning</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    
+    <section class="page-hero">
+      <span class="tag">Privacy</span>
+      <h1>Privacy Policy</h1>
+      <p>A simple privacy policy for the Too-Tee Learning static website.</p>
+    </section>
+    
+    <section>
+  <div class="section-inner narrow">
+    <p><strong>Last updated:</strong> May 19, 2026</p>
+
+    <h2>Overview</h2>
+    <p>Too-Tee Learning is a plain static educational website for kids, families, and adults who want to learn about teeth. We designed this site to be simple and privacy-conscious.</p>
+
+    <h2>Information We Collect</h2>
+    <p>We do not collect personal information directly through this website. The site does not include user accounts, checkout, comments, newsletter signup, embedded forms, or any other feature that asks visitors to submit personal information.</p>
+
+    <h2>Cookies and Analytics</h2>
+    <p>We do not use cookies, Google Analytics, advertising trackers, pixels, or behavioral analytics tools on this website.</p>
+
+    <h2>Static Site Hosting</h2>
+    <p>This site is hosted as a static website on GitHub Pages. Like most web hosting providers, GitHub may process basic technical information when pages are requested, such as IP address, browser information, request time, and requested URL. That processing is handled by GitHub as the hosting provider and is used for security, reliability, and operation of the service.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>The site may load web fonts from Google Fonts because the design uses externally hosted font files. When your browser requests those font files, Google may receive basic technical request information. We do not use Google Analytics or Google advertising services.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Too-Tee Learning provides educational content that may be useful for children, but the website does not ask children to create accounts, submit names, send messages, or provide personal information.</p>
+
+    <h2>Links to Other Websites</h2>
+    <p>Some pages may link to other websites or resources. Those websites are controlled by their own operators and may have their own privacy practices. This policy applies only to the Too-Tee Learning website.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy if the website changes, such as adding forms, analytics, email signup, or other interactive features. Any updates will be posted on this page with a revised date.</p>
+
+    <a class="btn" href="/">Back Home</a>
+  </div>
+</section>
+
+  </main>
+  <footer>
+  <strong>Too-Tee<sup>&reg;</sup> Learning - tooteelearning.com</strong><br>
+  Educational dental content for kids and families.<br>
+  Too-Tee<sup>&reg;</sup> is a registered trademark. All rights reserved.<br>
+  <a href="/privacy-policy/">Privacy Policy</a> ·
+  <a href="/about/">About</a>
+</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var header = document.querySelector('header');
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!header || !toggle || !nav) return;
+
+      function setMenu(open) {
+        header.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      }
+
+      toggle.addEventListener('click', function () {
+        setMenu(!header.classList.contains('nav-open'));
+      });
+
+      nav.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') setMenu(false);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setMenu(false);
+      });
+    });
+  </script>
+</body>
+</html>

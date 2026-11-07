@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Parents - Too-Tee Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/tootee-favicon.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <img src="/logo.png" alt="Too-Tee Learning logo">
+      <div class="logo-text">
+        <span class="logo-name">Too-Tee<sup>&reg;</sup></span>
+        <span class="logo-learning">TOOTEELEARNING.COM</span>
+      </div>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/tooth-facts/">Tooth Facts</a>
+      <a href="/for-kids/">For Kids</a>
+      <a href="/for-adults/">For Adults</a>
+      <a href="/start-learning/" class="nav-cta">Start Learning</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    
+    <section class="page-hero">
+      <span class="tag">For Parents</span>
+      <h1>Support Healthy Tooth Habits</h1>
+      <p>Quick guidance for helping children understand their teeth, build routines, and feel prepared for dental visits.</p>
+    </section>
+    
+    <section>
+  <div class="section-inner">
+    <div class="cards">
+      <article class="card"><h2>Make It Routine</h2><p>Brush morning and night, floss where teeth touch, and keep supplies easy for kids to reach with supervision.</p></article>
+      <article class="card"><h2>Explain Changes</h2><p>Loose baby teeth and new adult teeth are normal milestones. Simple explanations can make the process less stressful.</p></article>
+      <article class="card"><h2>Partner With Pros</h2><p>Regular dental checkups help catch problems early and confirm that teeth are coming in as expected.</p></article>
+    </div>
+    <a class="btn" href="/parents-teachers.html">Parent &amp; Teacher Resources</a>
+  </div>
+</section>
+
+  </main>
+  <footer>
+  <strong>Too-Tee<sup>&reg;</sup> Learning - tooteelearning.com</strong><br>
+  Educational dental content for kids and families.<br>
+  Too-Tee<sup>&reg;</sup> is a registered trademark. All rights reserved.<br>
+  <a href="/privacy-policy/">Privacy Policy</a> ·
+  <a href="/about/">About</a>
+</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var header = document.querySelector('header');
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!header || !toggle || !nav) return;
+
+      function setMenu(open) {
+        header.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      }
+
+      toggle.addEventListener('click', function () {
+        setMenu(!header.classList.contains('nav-open'));
+      });
+
+      nav.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') setMenu(false);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setMenu(false);
+      });
+    });
+  </script>
+</body>
+</html>

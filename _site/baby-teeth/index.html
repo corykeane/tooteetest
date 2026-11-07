@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Teeth - Too-Tee Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/tootee-favicon.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <img src="/logo.png" alt="Too-Tee Learning logo">
+      <div class="logo-text">
+        <span class="logo-name">Too-Tee<sup>&reg;</sup></span>
+        <span class="logo-learning">TOOTEELEARNING.COM</span>
+      </div>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/tooth-facts/">Tooth Facts</a>
+      <a href="/for-kids/">For Kids</a>
+      <a href="/for-adults/">For Adults</a>
+      <a href="/start-learning/" class="nav-cta">Start Learning</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    
+    <section class="page-hero">
+      <span class="tag">Baby Teeth</span>
+      <h1>Your First 20 Teeth</h1>
+      <p>Baby teeth help children chew, speak, smile, and hold space for adult teeth that arrive later.</p>
+    </section>
+    
+    <section>
+  <div class="section-inner article-page">
+    <div class="article-copy">
+      <h2>Why Baby Teeth Matter</h2>
+      <p>Baby teeth, also called primary teeth, are the first set of teeth in a child's mouth. Most children grow 20 baby teeth, and those teeth help with chewing, speaking, smiling, and guiding permanent teeth into place.</p>
+      <p>Because primary teeth have thinner enamel than adult teeth, they need steady care. Brush gently every day, use the toothpaste amount recommended by a dentist, and keep regular dental visits so tooth growth can be checked.</p>
+    </div>
+
+    <div class="info-grid">
+      <article class="info-card"><h3>When They Start</h3><p>The first baby tooth often appears around 6 months of age.</p></article>
+      <article class="info-card"><h3>Full Set</h3><p>The full set of 20 primary teeth is usually in place by age 2 or 3.</p></article>
+      <article class="info-card"><h3>Why They Loosen</h3><p>Primary teeth loosen as permanent teeth begin replacing them through tooth exfoliation.</p></article>
+    </div>
+
+    <img class="article-image" src="/assets/images/tooth-fairy.png" alt="Tooth fairy illustration">
+
+    <div class="article-copy">
+      <h2>Tooth Fairy Tradition</h2>
+      <p>The tooth fairy is a traditional figure in Western folklore who is believed to visit children and exchange lost baby teeth for small gifts or money, often left under a child's pillow while they sleep.</p>
+      <p>The tooth fairy is thought of as a magical figure who collects and keeps children's teeth as they grow and lose their baby teeth. The tradition dates back to the early 20th century and has become widely recognized.</p>
+      <p>Children often look forward to the tooth fairy because it can feel like a sign that they are growing up and becoming more independent. For parents, the tradition can be a fun way to celebrate and acknowledge the natural process of childhood growth and development.</p>
+      <p>Parents should communicate with children about the tooth fairy and establish clear expectations and boundaries around the tradition.</p>
+      <p>The tooth fairy is often shown as small and winged, similar to a fairy or an angel, and is believed to visit children at night while they sleep. When a child loses a tooth, they may place it under their pillow and wait. In the morning, the child often finds a small gift or coin in exchange for the tooth.</p>
+    </div>
+
+    <a class="btn" href="/#topics">Back to Topics</a>
+  </div>
+</section>
+
+  </main>
+  <footer>
+  <strong>Too-Tee<sup>&reg;</sup> Learning - tooteelearning.com</strong><br>
+  Educational dental content for kids and families.<br>
+  Too-Tee<sup>&reg;</sup> is a registered trademark. All rights reserved.<br>
+  <a href="/privacy-policy/">Privacy Policy</a> ·
+  <a href="/about/">About</a>
+</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var header = document.querySelector('header');
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!header || !toggle || !nav) return;
+
+      function setMenu(open) {
+        header.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      }
+
+      toggle.addEventListener('click', function () {
+        setMenu(!header.classList.contains('nav-open'));
+      });
+
+      nav.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') setMenu(false);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setMenu(false);
+      });
+    });
+  </script>
+</body>
+</html>

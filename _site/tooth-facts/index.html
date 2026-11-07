@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooth Facts - Too-Tee Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/tootee-favicon.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <img src="/logo.png" alt="Too-Tee Learning logo">
+      <div class="logo-text">
+        <span class="logo-name">Too-Tee<sup>&reg;</sup></span>
+        <span class="logo-learning">TOOTEELEARNING.COM</span>
+      </div>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/tooth-facts/">Tooth Facts</a>
+      <a href="/for-kids/">For Kids</a>
+      <a href="/for-adults/">For Adults</a>
+      <a href="/start-learning/" class="nav-cta">Start Learning</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    
+    <section class="page-hero">
+      <span class="tag">Tooth Facts</span>
+      <h1>Fast Facts About Teeth</h1>
+      <p>Teeth help you chew, speak clearly, smile confidently, and guide the way your mouth grows.</p>
+    </section>
+    
+    <section>
+  <div class="section-inner">
+    <div class="cards">
+      <article class="card"><h2>Baby Teeth</h2><p>Most children grow 20 baby teeth. They save space for adult teeth and help kids practice chewing and speaking.</p><a class="card-link" href="/baby-teeth/">Baby teeth and tooth fairy tradition</a></article>
+      <article class="card"><h2>Adult Teeth</h2><p>Most adults have up to 32 permanent teeth, including wisdom teeth. These teeth are designed to last a lifetime with good care.</p><a class="card-link" href="/tooth-development/">See the development chart</a></article>
+      <article class="card"><h2>Strong Enamel</h2><p>Enamel is the hard outer covering of each tooth. It protects the softer layers inside, but it still needs brushing and healthy foods.</p><a class="card-link" href="/tooth-anatomy/">Explore support tissues</a></article>
+      <article class="card"><h2>Plaque Control</h2><p>Plaque forms daily and needs regular brushing, flossing, rinsing, and dental visits to protect teeth and gums.</p><a class="card-link" href="/tooth-care/">Read healthy tips</a></article>
+    </div>
+    <a class="btn" href="/#topics">Back to Topics</a>
+  </div>
+</section>
+
+  </main>
+  <footer>
+  <strong>Too-Tee<sup>&reg;</sup> Learning - tooteelearning.com</strong><br>
+  Educational dental content for kids and families.<br>
+  Too-Tee<sup>&reg;</sup> is a registered trademark. All rights reserved.<br>
+  <a href="/privacy-policy/">Privacy Policy</a> ·
+  <a href="/about/">About</a>
+</footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var header = document.querySelector('header');
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!header || !toggle || !nav) return;
+
+      function setMenu(open) {
+        header.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      }
+
+      toggle.addEventListener('click', function () {
+        setMenu(!header.classList.contains('nav-open'));
+      });
+
+      nav.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') setMenu(false);
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setMenu(false);
+      });
+    });
+  </script>
+</body>
+</html>
